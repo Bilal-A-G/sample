@@ -193,7 +193,7 @@ int32 SAMPLE_AppInit(void)
      ** This is useful for debugging the loading of individual applications.
      */
     status = CFE_EVS_SendEvent(SAMPLE_STARTUP_INF_EID, CFE_EVS_EventType_INFORMATION,
-               "SAMPLE App Initialized. Version %d.%d.%d.%d",
+               "Super cool app initialized!!!!. Version %d.%d.%d.%d",
                 SAMPLE_MAJOR_VERSION,
                 SAMPLE_MINOR_VERSION, 
                 SAMPLE_REVISION, 
@@ -275,7 +275,7 @@ void SAMPLE_ProcessGroundCommand(void)
             if (SAMPLE_VerifyCmdLength(SAMPLE_AppData.MsgPtr, sizeof(SAMPLE_NoArgs_cmd_t)) == OS_SUCCESS)
             {
                 /* Second, send EVS event on successful receipt ground commands*/
-                CFE_EVS_SendEvent(SAMPLE_CMD_NOOP_INF_EID, CFE_EVS_EventType_INFORMATION, "SAMPLE: NOOP command received");
+                CFE_EVS_SendEvent(SAMPLE_CMD_NOOP_INF_EID, CFE_EVS_EventType_INFORMATION, "Sample app works, Noop command recieved!!!!");
                 /* Third, do the desired command action if applicable, in the case of NOOP it is no operation */
             }
             break;
